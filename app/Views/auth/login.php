@@ -13,7 +13,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Login Pages</title>
+    <!-- <title>Login Pages</title> -->
+    <title><?= esc($title) ?></title>
 
     <meta name="description" content="" />
 
@@ -109,12 +110,12 @@
                       </g>
                     </svg>
                   </span>
-                  <span class="app-brand-text demo text-body fw-bold">Sneat</span>
+                  <span class="app-brand-text demo text-body fw-bold">Payshop</span>
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Welcome to Nexshop! 👋</h4>
-              <p class="mb-4">Please sign-in to your account and start the adventure</p>
+              <h4 class="mb-2">Welcome to Payshop! 👋</h4>
+              <p class="mb-4">Please sign-in to your account and start the shopping</p>
 
               <form id="formAuthentication" class="mb-3" action="<?= url_to('login') ?>" method="POST">
                 <div class="mb-3">
@@ -164,7 +165,7 @@
 
               <p class="text-center">
                 <span>New on our platform?</span>
-                <a href="auth-register-basic.html">
+                <a href="<?= base_url('/signup')?>">
                   <span>Create an account</span>
                 </a>
               </p>
@@ -177,14 +178,7 @@
 
     <!-- / Content -->
 
-    <div class="buy-now">
-      <a
-        href="https://themeselection.com/item/sneat-bootstrap-html-admin-template/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
-    </div>
+    
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

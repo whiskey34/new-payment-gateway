@@ -14,7 +14,10 @@ class LoginController extends BaseController
     public function index()
     {
         helper(['form']);
-        return view('auth/login');
+        $data = [
+            'title' => 'Login Page'
+        ];
+        return view('auth/login', $data);
     }
 
     public function login()

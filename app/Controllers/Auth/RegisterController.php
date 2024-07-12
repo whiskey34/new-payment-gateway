@@ -5,6 +5,8 @@ namespace App\Controllers\Auth;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
+use App\Controllers\Auth\SessionController;
+
 use App\Models\UserModel;
 
 class RegisterController extends BaseController
@@ -12,7 +14,9 @@ class RegisterController extends BaseController
     public function index()
     {
         helper(['form']);
-        $data = [];
+        $data = [
+            'title' => 'Signup page'
+        ];
         return view('auth/register', $data);
     }
 

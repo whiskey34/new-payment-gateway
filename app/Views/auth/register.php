@@ -13,7 +13,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Sign Up Nexshop</title>
+    <!-- <title>Sign Up Nexshop</title> -->
+    <title><?= esc($title) ?></title>
 
     <meta name="description" content="" />
 
@@ -109,7 +110,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span class="app-brand-text demo text-body fw-bold">Sneat</span>
+                  <span class="app-brand-text demo text-body fw-bold">Payshop</span>
                 </a>
               </div>
               <!-- /Logo -->
@@ -117,6 +118,16 @@
               <p class="mb-4">Make your store management easy and fun!</p>
 
               <form id="formAuthentication" class="mb-3" action="<?= base_url('register') ?>" method="post">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    autofocus />
+                </div>
                 <div class="mb-3">
                   <label for="username" class="form-label">Username</label>
                   <input
@@ -159,7 +170,7 @@
 
               <p class="text-center">
                 <span>Already have an account?</span>
-                <a href="auth-login-basic.html">
+                <a href="<?= base_url('/login')?>">
                   <span>Sign in instead</span>
                 </a>
               </p>
@@ -172,14 +183,7 @@
 
     <!-- / Content -->
 
-    <div class="buy-now">
-      <a
-        href="https://themeselection.com/item/sneat-bootstrap-html-admin-template/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
-    </div>
+    
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
